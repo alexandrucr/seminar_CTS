@@ -1,2 +1,2 @@
 # seminar_CTS
-repo seminarii CTS
+repo seminare CTS
