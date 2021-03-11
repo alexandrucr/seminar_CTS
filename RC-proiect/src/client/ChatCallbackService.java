@@ -72,8 +72,8 @@ public class ChatCallbackService extends UnicastRemoteObject implements IChatCal
 		stub.logout(this);
 	}
 
-	public void send(String to, String message, String nameOfClient) throws RemoteException { // modif
-		stub.send(to, message, this, nameOfClient); // modif
+	public void send(String to, String message, String nameOfClient) throws RemoteException {
+		stub.send(to, message, this, nameOfClient);
 	}
 
 }

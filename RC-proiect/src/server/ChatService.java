@@ -18,7 +18,6 @@ import common.IChatCallback;
 public class ChatService implements IChat {
 
 	private Map<String, IChatCallback> users = new HashMap<String, IChatCallback>();
-	//private Map<IChatCallback, Integer> numberOfTries = new HashMap<IChatCallback, Integer>();
 	private int currentNumber;
 	
 	private void generateRandomNumber() {
@@ -85,16 +84,16 @@ public class ChatService implements IChat {
 		System.out.println(name.get() + " is guessing...");
 		if(message.length() <= 3 || message.length() >= 5)
         {
-        	//users.get(nameOfClient).onReceive(nameOfClient, "Wrong input!"); //
         	System.out.println("Wrong input by " + name.get() + "!");
             return;
         }
+		
 		String answer = updateAnswer(Integer.parseInt(message.trim()));
 		int centeredPositions = findCentered(Integer.parseInt(message.trim()));
         int uncenteredPositions = findUncentered(Integer.parseInt(message.trim()));
         System.out.println("Centered numbers: " + centeredPositions);
         System.out.println("Uncentered numbers: " + Math.abs(uncenteredPositions - centeredPositions));
-        // numberOfTries
+
         int wrongNumbers = 0;
         for(int i=0; i < answer.length() - 1; i++)
         {

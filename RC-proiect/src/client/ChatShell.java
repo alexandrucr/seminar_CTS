@@ -191,7 +191,6 @@ public class ChatShell extends Shell implements IChatCallback {
 	public void onReceive(String from, String message) throws RemoteException {
 		getDisplay().asyncExec(() -> {
 			lstMessages.add(String.format("%s: %s", from, message));
-			//lstMessages.add("test");
 		});		
 	}
 

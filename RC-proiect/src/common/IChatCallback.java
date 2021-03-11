@@ -14,7 +14,6 @@ public interface IChatCallback extends Remote {
 	void onRemoveUser(String name) throws RemoteException;
 	
 	void onReceive(String from, String message) throws RemoteException;
-	//void onReceive(String from, String message, String nameOfClient) throws RemoteException;
 	
 	void onExit() throws RemoteException;
 }
